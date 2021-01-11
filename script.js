@@ -23,7 +23,7 @@ function initMap() {
 // GET THE DATA FROM API
 
 const getCountryData = () => {
-    fetch("https://corona.lmao.ninja/v3/covid-19/countries")
+    fetch("http://localhost:3000/countries")
         .then((response) => {
             return response.json();
         })
