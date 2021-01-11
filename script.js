@@ -23,7 +23,7 @@ function initMap() {
 // GET THE DATA FROM API
 
 const getCountryData = () => {
-    fetch("http://localhost:3000/countries")
+    fetch("https://corona.lmao.ninja/v3/covid-19/countries")
         .then((response) => {
             return response.json();
         })
@@ -83,6 +83,7 @@ const buildChart = (chartData) => {
 
         // Configuration options go here (graph by chart.js/ moment.js)
         options: {
+            maintainAspectRatio: false,
             tooltips: {
                 mode: 'index',
                 intersect: false
@@ -94,10 +95,10 @@ const buildChart = (chartData) => {
                         format: timeFormat,
                         tooltipFormat: 'll'
                     },
-                    scaleLabel: {
-                        display: true,
-                        labelString: 'Date'
-                    }
+                    // scaleLabel: {
+                    //     display: true,
+                    //     labelString: 'Date'
+                    // }
                 }],
                 yAxes: [{
                     ticks: {

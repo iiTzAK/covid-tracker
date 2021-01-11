@@ -10,17 +10,96 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="new-style.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
         integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
         crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="map-style.js"></script>
     <script src="script.js"></script>
 </head>
 
 <body>
-    <div class="nav"></div>
+    <div class="container-fluid main">
+        <div class="row">
+            <div class="col-8">
+                <div class="row header-container">
+                    <div class="col title-container">
+                        <h1>Covid-19</h1>
+                        <h4>Coronavirus</h4>
+                    </div>
+                    <div class="col search-container">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-search"></i></span>
+                            <input type="text" class="form-control" placeholder="Search Location"
+                                aria-label="Search Location" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                </div>
+                <div class="row stats-container">
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Total Cases</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">1,423,253</h6>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Active Cases</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">1,023,253</h6>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Recovered</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">302,964</h6>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Deaths</h5>
+                                <h6 class="card-subtitle mb-2 text-muted">23,253</h6>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row map-container mt-3">
+                    <div class="col">
+                        <div id="map"></div>
+                    </div>
+                </div>
+                <div class="row chart-container mt-3">
+                    <div class="col linear-chart">
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    <div class="col">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- <div class="nav"></div>
     <div class="map-info">
         <div id="map"></div>
     </div>
@@ -43,7 +122,7 @@
         <div class="chart-data">
             <canvas id="myChart"></canvas>
         </div>
-    </div>
+    </div> -->
 
     <script defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZRToHqZDFFtoZwJhwnvo7ugJ44VvqZPw&callback=initMap">
